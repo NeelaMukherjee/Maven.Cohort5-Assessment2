@@ -92,4 +92,12 @@ public class Address {
 
         return (Boolean) null;
     }
+
+    @Override
+
+    public String toString(){
+
+         return "Address{addressLine1='" + this.getAddressLine1() + "', addressLine2='" + this.getAddressLine2() + "', city='" +this.getCity()+"', " +
+                 "state='" + this.getState()+ "', zipcode='"+ this.getZipcode()+ "'}";
+    }
 }

@@ -11,19 +11,20 @@ public class Person {
      * @param address - address of person
      */
 
-    Long id ;
+    Long id;
     String name;
     Address address;
+
     public Person(Long id, String name, Address address) {
 
         this.id = id;
         this.name = name;
-        //this.address = address;
-        address.getAddressLine1();
-        address.getAddressLine2();
-        address.getCity();
-        address.getState();
-        address.getZipcode();
+        this.address = address;
+//        address.getAddressLine1();
+//        address.getAddressLine2();
+//        address.getCity();
+//        address.getState();
+//        address.getZipcode();
 
     }
 
@@ -49,11 +50,13 @@ public class Person {
 
     public Address getAddress() {
 
-        this.address.getAddressLine1();
-        this.address.getAddressLine2();
-        this.address.getCity();
-        this.address.getState();
-        this.address.getZipcode();
+        //return address;
+
+//        this.address.getAddressLine1();
+//        this.address.getAddressLine2();
+//        this.address.getCity();
+//        this.address.getState();
+//        this.address.getZipcode();
 
 
         return address;
@@ -66,6 +69,7 @@ public class Person {
 
     @Override
     public boolean equals(Object o) {
-        return (Boolean)null;
+        return (Boolean) null;
     }
 }
+
