@@ -10,7 +10,18 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by left-padding
      */
     public static String padLeft(String stringToBePadded, int amountOfPadding) {
-        return null;
+
+        if(stringToBePadded.length() >= amountOfPadding){
+
+            return stringToBePadded;
+        }
+        StringBuilder sb = new StringBuilder();
+        while (sb.length() < amountOfPadding - stringToBePadded.length()) {
+            sb.append(' ');
+        }
+        sb.append(stringToBePadded);
+
+        return sb.toString();
     }
 
     /**
@@ -19,7 +30,17 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by right-padding
      */
     public static String padRight(String stringToBePadded, int amountOfPadding) {
-        return null;
+
+        if(stringToBePadded.length() >= amountOfPadding){
+
+            return stringToBePadded;
+        }
+
+        StringBuilder sb = new StringBuilder(stringToBePadded);
+        while(sb.length()<amountOfPadding){
+            sb.append(' ');
+        }
+        return sb.toString();
     }
 
     /**
@@ -28,7 +49,14 @@ public class StringUtils {
      * @return the string repeated and concatenated `n` times
      */
     public static String repeatString(String stringToBeRepeated, int numberOfTimeToRepeat) {
-        return null;
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 1; i<=numberOfTimeToRepeat; i++){
+
+            sb.append(stringToBeRepeated);
+        }
+        return sb.toString();
     }
 
     /**
@@ -36,7 +64,20 @@ public class StringUtils {
      * @return - true if string only contains alpha characters
      */
     public static Boolean isAlphaString(String string) {
-        return null;
+        boolean bool = false;
+        Integer count = 0;
+
+        for (int i = 0; i < string.length(); i++) {
+
+            if (Character.isLetter(string.charAt(i)) || string.charAt(i) == ' ') {
+                count++;
+            }
+
+        }
+        if(count == string.length()) {bool = true;}
+
+
+        return bool;
     }
 
     /**
@@ -44,7 +85,21 @@ public class StringUtils {
      * @return - true if string only contains numeric characters
      */
     public static Boolean isNumericString(String string) {
-        return null;
+
+        boolean bool = false;
+        Integer count = 0;
+
+        for (int i = 0; i < string.length(); i++) {
+
+            if (Character.isDigit(string.charAt(i)) || string.charAt(i) == ' ') {
+                count++;
+            }
+
+        }
+        if(count == string.length()) {bool = true;}
+
+
+        return bool;
     }
 
     /**
