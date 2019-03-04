@@ -10,31 +10,58 @@ public class Person {
      * @param name - name of person
      * @param address - address of person
      */
+
+    Long id ;
+    String name;
+    Address address;
     public Person(Long id, String name, Address address) {
+
+        this.id = id;
+        this.name = name;
+        //this.address = address;
+        address.getAddressLine1();
+        address.getAddressLine2();
+        address.getCity();
+        address.getState();
+        address.getZipcode();
+
     }
 
     public Person() {
+
     }
 
     public Long getId() {
-        return null;
+        return id;
     }
 
     public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
-        return null;
+        return name;
     }
 
     public void setName(String name) {
+        this.name = name;
     }
 
     public Address getAddress() {
-        return null;
+
+        this.address.getAddressLine1();
+        this.address.getAddressLine2();
+        this.address.getCity();
+        this.address.getState();
+        this.address.getZipcode();
+
+
+        return address;
     }
 
     public void setAddress(Address address) {
+
+        this.address = address;
     }
 
     @Override

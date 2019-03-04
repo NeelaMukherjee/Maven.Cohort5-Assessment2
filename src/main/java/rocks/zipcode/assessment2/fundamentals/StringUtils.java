@@ -107,6 +107,24 @@ public class StringUtils {
      * @return - true if string only contains special characters
      */
     public static Boolean isSpecialCharacterString(String string) {
-        return null;
+
+        boolean bool = false;
+
+         if(!(isNumericString(string) && isAlphaString(string))){
+
+             bool= true;
+         }
+
+         else if (isNumericString(string)) {
+
+            bool = false;
+        }
+
+         else if(isAlphaString(string)){
+
+             bool = false;
+         }
+
+         return  bool;
     }
 }
