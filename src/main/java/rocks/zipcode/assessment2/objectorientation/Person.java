@@ -20,15 +20,14 @@ public class Person {
         this.id = id;
         this.name = name;
         this.address = address;
-//        address.getAddressLine1();
-//        address.getAddressLine2();
-//        address.getCity();
-//        address.getState();
-//        address.getZipcode();
 
     }
 
     public Person() {
+
+        this.id = Long.MIN_VALUE;
+        this.name = "";
+        this.address = new Address();
 
     }
 
@@ -50,15 +49,6 @@ public class Person {
 
     public Address getAddress() {
 
-        //return address;
-
-//        this.address.getAddressLine1();
-//        this.address.getAddressLine2();
-//        this.address.getCity();
-//        this.address.getState();
-//        this.address.getZipcode();
-
-
         return address;
     }
 
@@ -68,7 +58,26 @@ public class Person {
     }
 
     @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address=" + address +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
+
+        //Person p = (Person) o;
+        if( o instanceof Person) {
+            Person p = (Person) o;
+            return (this.name.equals(p.getName())&&
+                    (this.id.equals(p.getId())) &&
+                    (this.address.equals(p.getAddress())));
+        }
+
+
         return (Boolean) null;
     }
 }

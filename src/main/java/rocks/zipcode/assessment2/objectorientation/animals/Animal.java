@@ -33,13 +33,15 @@ public class Animal {
     }
 
     public Person getOwner() {
-        return null;
+        return owner;
     }
 
     public void setOwner(Person owner) {
+        this.owner = owner;
     }
 
     public Address getAddress() {
-        return null;
+
+        return owner.getAddress() ;
     }
 }

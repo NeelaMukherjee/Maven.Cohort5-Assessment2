@@ -31,11 +31,7 @@ public class Address {
 
     public Address () {
 
-        this.addressLine1 ="";
-        this.addressLine2 = "";
-        this.city = "";
-        this.state = "";
-        this.zipcode = "";
+        this("", "", "", "", "");
     }
 
     public String getAddressLine1() {
@@ -90,6 +86,15 @@ public class Address {
     @Override
     public boolean equals(Object o) {
 
+        if(o instanceof Address){
+
+            Address addr = (Address)o;
+            return ((addressLine1.equals(addr.getAddressLine1())) &&
+                    (addressLine2.equals(addr.getAddressLine2())) &&
+                            (city.equals(addr.getCity())) &&
+                            (state.equals(addr.getState())) &&
+                            (zipcode.equals(addr.getZipcode())));
+        }
         return (Boolean) null;
     }
 
